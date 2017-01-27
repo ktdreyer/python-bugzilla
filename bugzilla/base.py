@@ -366,7 +366,7 @@ class Bugzilla(object):
     def _listify(self, val):
         if val is None:
             return val
-        if isinstance(val, list):
+        if isinstance(val, (tuple, list)):
             return val
         return [val]
 
